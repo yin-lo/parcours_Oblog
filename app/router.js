@@ -6,7 +6,7 @@ const controller = require("./controller.js");
 const { Router } = require('express');
 const router = Router();
 
-
+router.get('/',controller.displayHomepage);
 
 
 module.exports = router;

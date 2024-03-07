@@ -18,6 +18,10 @@ app.set('view engine', 'ejs'); // Indication du moteur de rendu (nous utilisons 
 // /css/style.css
 app.use(express.static('public'));
 
+// appel des articles de manière globale
+// const articles = require('./data/articles.json');
+// app.locals.articles = articles;
+
 // Import du router
 const router = require("./app/router.js");
 // Association de mon router avec mon serveur Express

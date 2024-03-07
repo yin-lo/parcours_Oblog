@@ -5,25 +5,26 @@
 <main class="content pure-u-1 pure-u-md-3-4 pure-u-xl-5-6">
   <h1 class="content-title">Les actualités du blog</h1>
   <div class="pure-g">
-    <article class="card pure-u-1 pure-u-lg-1-2 pure-u-xl-1-3">
-      <header>
-        <img class="card-img pure-img" src="images/laptop.jpg" alt="Le code css de notre site">
-        <h2>Ivre, il refait tous les challenges en une nuit.</h2>
-        <div class="card-meta">
-          Par <a href="#">Ben O'clock</a> 
-          dans la catégorie <a href="#">Histoire</a>
-        </div>
-      </header>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam dolore, minus debitis facere sit
-        excepturi impedit consequuntur deleniti tenetur culpa enim corrupti et architecto blanditiis odio iusto,
-        voluptatibus temporibus ab fugit pariatur. Asperiores ducimus reiciendis quibusdam obcaecati animi
-        pariatur similique.
-      </p>
-      <a class="card-action pure-button" href="article.html">Lire l'article</a>
-    </article>
-
-    <article class="card pure-u-1 pure-u-lg-1-2 pure-u-xl-1-3">
+    <% for( const article of articles ) { %>
+      <article class="card pure-u-1 pure-u-lg-1-2 pure-u-xl-1-3">
+        <header>
+          <img class="card-img pure-img" src="images/<%= article.img %>" alt="<%= article.img_alt %>">
+          <h2><%= article.title %></h2>
+          <div class="card-meta">
+            Par <a href="#"><%= article.author %></a> 
+            dans la catégorie <a href="#"><%= article.category %></a>
+          </div>
+        </header>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam dolore, minus debitis facere sit
+          excepturi impedit consequuntur deleniti tenetur culpa enim corrupti et architecto blanditiis odio iusto,
+          voluptatibus temporibus ab fugit pariatur. Asperiores ducimus reiciendis quibusdam obcaecati animi
+          pariatur similique.
+        </p>
+        <a class="card-action pure-button" href="article.html">Lire l'article</a>
+      </article>
+    <% } %>
+    <!-- <article class="card pure-u-1 pure-u-lg-1-2 pure-u-xl-1-3">
       <header>
         <img class="card-img pure-img" src="images/hacker.jpg" alt="Le boss de notre équipe de développer">
         <h2>Optimisez les performances de vos bugs en production.</h2>
@@ -96,7 +97,7 @@
         Quos odio consectetur asperiores nostrum distinctio. Cum ea voluptate inventore fuga ipsum quibusdam laboriosam tenetur
       </p>
       <a class="card-action pure-button" href="article.html">Lire l'article</a>
-    </article>
+    </article> -->
   </div>
 
 <%- include("partials/footer") %>

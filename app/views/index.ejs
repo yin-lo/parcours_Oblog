@@ -15,11 +15,7 @@
             dans la catégorie <a href="#"><%= article.category %></a>
           </div>
         </header>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam dolore, minus debitis facere sit
-          excepturi impedit consequuntur deleniti tenetur culpa enim corrupti et architecto blanditiis odio iusto,
-          voluptatibus temporibus ab fugit pariatur. Asperiores ducimus reiciendis quibusdam obcaecati animi
-          pariatur similique.
+        <p><%= article.text.split(' ',30).join(' ') %>
         </p>
         <a class="card-action pure-button" href="/article/<%= article.id %>">Lire l'article</a>
       </article>

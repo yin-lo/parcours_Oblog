@@ -17,4 +17,7 @@ router.use((req, res, next) => {
 // Route vers la page d'accueil
 router.get('/', controller.displayHomepage);
 
+// route vers le détail de chaque article
+router.get('/article/:id', controller.displayArticle);
+
 module.exports = router;

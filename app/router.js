@@ -20,4 +20,7 @@ router.get('/', controller.displayHomepage);
 // route vers le détail de chaque article
 router.get('/article/:id', controller.displayArticle);
 
+// route vers le tri par category
+router.get('/:category', controller.displayCategory);
+
 module.exports = router;

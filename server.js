@@ -4,7 +4,7 @@
 const express = require('express');
 // Instanciation du serveur Express (on initialise un nouveau serveur Express et on le place dans une variable "app")
 const app = express();
-const PORT = 3000;
+const PORT = 3001;
 
 // Initialisation du moteur de rendu
 app.set('views', './app/views'); // Indication du dossier contenant les fichiers .ejs
@@ -19,7 +19,7 @@ app.set('view engine', 'ejs'); // Indication du moteur de rendu (nous utilisons 
 app.use(express.static('public'));
 
 // appel des articles de manière globale
-// const articles = require('./data/articles.json');
+// const articles = require('../data/articles.json');
 // app.locals.articles = articles;
 
 // Import du router
